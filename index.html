@@ -3,72 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>致最亲爱的你</title>
+    <title>致亲爱的你</title>
     <style>
-        /* 页面整体样式 */
         body {
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #fff5f5; /* 浅粉色背景，更浪漫 */
+            min-height: 100vh;
+            background-color: #fff0f3; /* 浪漫浅粉色 */
             font-family: "Microsoft YaHei", sans-serif;
         }
 
-        /* 照片容器 */
-        .photo-container {
-            width: 90%;
-            max-width: 500px;
-            border: 8px solid white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 15px;
-            overflow: hidden;
+        /* 照片外框 */
+        .photo-frame {
+            background: white;
+            padding: 12px;
+            padding-bottom: 40px; /* 留白感，像拍立得 */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            max-width: 90%;
             transition: transform 0.3s ease;
         }
 
-        .photo-container:hover {
-            transform: scale(1.02); /* 鼠标悬停时微放大 */
+        .photo-frame:hover {
+            transform: translateY(-5px) rotate(1deg);
         }
 
-        /* 照片样式 */
         img {
-            width: 100%;
+            max-width: 100%;
+            height: auto;
             display: block;
+            border: 1px solid #eee;
         }
 
         /* 文本样式 */
-        .text {
+        .love-text {
             margin-top: 30px;
             font-size: 2.5rem;
-            color: #d63031; /* 爱心红 */
+            color: #ff4d6d; /* 深粉红 */
             font-weight: bold;
-            letter-spacing: 5px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
-        /* 简单的心跳动画 */
-        @keyframes heartbeat {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
+        /* 爱心动画 */
         .heart {
-            color: #d63031;
             display: inline-block;
-            animation: heartbeat 1.5s infinite;
+            animation: pulse 1.2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
 
-    <div class="photo-container">
-        <img src="IMG_6613.HEIC" alt="我们的照片">
+    <div class="photo-frame">
+        <img src="aibb.jpg.jpg" alt="我们的照片">
     </div>
 
-    <div class="text">
+    <div class="love-text">
         我只爱你 <span class="heart">❤️</span>
     </div>
 
